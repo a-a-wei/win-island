@@ -1,0 +1,60 @@
+[package]
+name = "win-island"
+version = "0.7.2"
+edition = "2024"
+publish = false
+
+[dependencies]
+anyhow = "1"
+futures-util = "0.3"
+gpui-kit = { version = "=0.10.0", default-features = false }
+image = { version = "0.25", default-features = false, features = ["bmp", "gif", "ico", "jpeg", "png", "tiff", "webp"] }
+pollster = "0.4"
+raw-window-handle = "0.6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+smol = "2"
+sysinfo = { version = "=0.31.4", default-features = false, features = ["system", "network"] }
+tempfile = "3"
+windows-collections = "0.3.2"
+windows-core = "0.62.2"
+windows = { version = "0.62.2", features = [
+    "ApplicationModel",
+    "Devices_Bluetooth",
+    "Devices_Bluetooth_GenericAttributeProfile",
+    "Devices_Enumeration",
+    "Devices_Radios",
+    "Foundation",
+    "Foundation_Collections",
+    "Media_Control",
+    "Storage_Streams",
+    "UI_Notifications_Management",
+    "Win32_Devices_FunctionDiscovery",
+    "Win32_Devices_DeviceAndDriverInstallation",
+    "Win32_Devices_Properties",
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Media_Audio_Endpoints",
+    "Win32_Media_KernelStreaming",
+    "Win32_NetworkManagement_Ndis",
+    "Win32_NetworkManagement_IpHelper",
+    "Win32_NetworkManagement_WiFi",
+    "Win32_Storage_Packaging_Appx",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_DataExchange",
+    "Win32_System_Memory",
+    "Win32_System_Performance",
+    "Win32_System_SystemServices",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Registry",
+    "Win32_System_Variant",
+    "Win32_System_WinRT",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell_Common",
+    "Win32_UI_Shell_PropertiesSystem",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[profile.dev]
+debug = 0
